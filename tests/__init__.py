@@ -9,6 +9,9 @@ class TestMath(unittest.TestCase):
   def test_failed_request(self):
     with self.assertRaises(MissingSchema):
       httpreq('github.com')
+  
+  def test_broken_test(self):
+    self.assertEqual(1, 2)
 
 if __name__ == '__main__':
   unittest.main()
